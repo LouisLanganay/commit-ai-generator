@@ -9,7 +9,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "indent": ["error", "tab"],
+    "indent": ["error", 2],
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "comma-dangle": ["error", "never"],

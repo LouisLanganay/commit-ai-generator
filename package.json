@@ -14,10 +14,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "commit-ai.helloWorld",
-        "title": "Hello World"
+        "command": "commit-ai.generateCommit",
+        "title": "Generate Commit"
       }
     ],
+    "menus": {
+      "scm/title": [
+        {
+          "command": "commit-ai.generateCommit",
+          "when": "scmProvider == git",
+          "group": "navigation"
+        }
+      ]
+    },
     "configuration": {
       "title": "Commit AI",
       "properties": {
@@ -25,6 +34,12 @@
           "type": "string",
           "default": null,
           "markdownDescription": "Your OpenAI API key. You can get one [here](https://platform.openai.com/)."
+        },
+        "commit-ai.openAiMaxToken": {
+          "type": "number",
+          "default": 1000,
+          "minimum": 10,
+          "markdownDescription": "**$0.0015 / 1K tokens.** The number of tokens to use for each commit message. 1,000 tokens is about 750 words."
         }
       }
     }
@@ -63,5 +78,8 @@
   "bugs": {
     "url": "https://github.com/LouisLanganay/commit-ai/issues"
   },
-  "homepage": "https://github.com/LouisLanganay/commit-ai#readme"
+  "homepage": "https://github.com/LouisLanganay/commit-ai#readme",
+  "dependencies": {
+    "openai": "^4.11.1"
+  }
 }
