@@ -60,7 +60,7 @@ This extension is released under the [MIT License](LICENSE).
 
 ---
 
-<<<<<<< HEAD
+Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!
 Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!
 =======
 Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!
