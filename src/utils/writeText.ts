@@ -1,8 +1,7 @@
 import * as vscode from 'vscode';
 
 const writeInputBox = (text: string | null | undefined, repository: any) => {
-  repository.inputBox.value = '';
-  repository.inputBox.value = text;
+  repository.inputBox.value += text;
 };
 
 const writeTextEditor = (

@@ -15,7 +15,12 @@
     "commands": [
       {
         "command": "commit-ai.generateCommit",
-        "title": "Generate Commit"
+        "title": "Generate Commit",
+        "category": "Commit AI",
+        "icon": {
+          "light": "./src/assets/button_light.svg",
+          "dark": "./src/assets/button_dark.svg"
+        }
       }
     ],
     "menus": {
@@ -35,11 +40,55 @@
           "default": null,
           "markdownDescription": "Your OpenAI API key. You can get one [here](https://platform.openai.com/)."
         },
-        "commit-ai.openAiMaxToken": {
+        "commit-ai.prompt.openAiMaxToken": {
           "type": "number",
-          "default": 1000,
+          "default": 500,
           "minimum": 10,
-          "markdownDescription": "**$0.0015 / 1K tokens.** The number of tokens to use for each commit message. 1,000 tokens is about 750 words."
+          "markdownDescription": "1,000 tokens is about 750 words. The [price](https://openai.com/pricing) per token is different for each model. **``500`` is recommended**"
+        },
+        "commit-ai.commitNorm": {
+          "type": "string",
+          "enum": [
+            "Karma",
+            "Basic",
+            "Dotted",
+            "Emoji"
+          ],
+          "enumDescriptions": [
+            "<type>(<scope>): <subject> <body>",
+            "<type>: <title>",
+            "<type>(<scope>): <subject> <body (with dotted changes)>",
+            "<emoji> <type>: <subject>"
+          ],
+          "default": "Basic",
+          "markdownDescription": "The commit norm to use for generating commit messages."
+        },
+        "commit-ai.prompt.customPrompt": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Set a custom prompt describing the commit message format to generate."
+        },
+        "commit-ai.prompt.openAiTemperature": {
+          "type": "number",
+          "default": 0.7,
+          "minimum": 0,
+          "maximum": 2,
+          "markdownDescription": "Controls randomness: Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive. **``0.7`` is recommended**"
+        },
+        "commit-ai.prompt.openAiModel": {
+          "type": "string",
+          "enum": [
+            "gpt-3.5-turbo",
+            "gpt-3.5-turbo-16k",
+            "gpt-4"
+          ],
+          "enumDescriptions": [
+            "Input: $0.0015 / 1K tokens - Ouput: $0.002 / 1K tokens",
+            "Input: $0.003 / 1K tokens - Ouput: $0.004 / 1K tokens",
+            "Input: $0.03 / 1K tokens - Ouput: $0.06 / 1K tokens"
+          ],
+          "default": "gpt-3.5-turbo-16k",
+          "markdownDescription": "The model to use for generating commit messages. The [price](https://openai.com/pricing) per token is different for each model."
         }
       }
     }

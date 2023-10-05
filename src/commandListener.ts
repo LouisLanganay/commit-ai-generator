@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import {
   generateCommit
-} from './commands/index';
+} from './commands';
 
 const commands = [
   {
