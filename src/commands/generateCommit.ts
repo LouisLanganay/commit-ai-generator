@@ -3,6 +3,8 @@ import OpenAI from 'openai';
 import { writeText } from '../utils';
 import handleOpenAIError from '../utils/handleOpenAIError';
 
+let isRunning = false;
+
 async function notApiKey() {
   const config = vscode.workspace.getConfiguration();
   const errorMessage = 'OpenAI API Key is not set. Please set it in the settings.';
@@ -33,26 +35,17 @@ async function notApiKey() {
   return;
 }
 
-const generateCommit = async () => {
-  const config = vscode.workspace.getConfiguration();
-  const openAiApiKey = config.get('commit-ai.openAiApiKey');
-  const openAiMaxToken = config.get('commit-ai.openAiMaxToken');
-
-  if (!openAiApiKey)
-    return notApiKey();
-
-  const gitExtension = vscode.extensions.getExtension('vscode.git')?.exports;
-  if (!gitExtension)
-    throw new Error('Git extension is not available.');
-  const repository = gitExtension.getAPI(1).repositories[0];
+async function completionsCreate(
+  openAiApiKey: unknown,
+  openAiMaxToken: unknown,
+  gitDiffChanges: string,
+  repository: any
+) {
+  isRunning = true;
 
   const openai = new OpenAI({
     apiKey: openAiApiKey as string
   });
-
-  const gitDiffChanges = await repository.diff(true);
-  if (!gitDiffChanges)
-    return vscode.window.showWarningMessage('No changes to commit.');
 
   await openai.chat.completions.create({
     max_tokens: openAiMaxToken as number,
@@ -69,9 +62,52 @@ const generateCommit = async () => {
     model: 'gpt-3.5-turbo'
   }).catch((err) => {
     handleOpenAIError(err);
+    isRunning = false;
   }).then((response) => {
     console.info(response);
     writeText(response?.choices[0].message.content, repository);
+    isRunning = false;
+  });
+}
+
+const generateCommit = async () => {
+  if (isRunning)
+    return vscode.window.showWarningMessage('Commit AI is already isRunning. \
+  Please wait until it is finished.');
+  const config = vscode.workspace.getConfiguration();
+  const openAiApiKey = config.get('commit-ai.openAiApiKey');
+  const openAiMaxToken = config.get('commit-ai.openAiMaxToken');
+
+  if (!openAiApiKey)
+    return notApiKey();
+
+  const gitExtension = vscode.extensions.getExtension('vscode.git')?.exports;
+  if (!gitExtension)
+    throw new Error('Git extension is not available.');
+  const repository = gitExtension.getAPI(1).repositories[0];
+
+  const gitDiffChanges = await repository.diff(true);
+  if (!gitDiffChanges)
+    return vscode.window.showWarningMessage('No changes to commit.');
+
+  vscode.window.withProgress({
+    location: vscode.ProgressLocation.Notification,
+    title: 'Generating commit message...',
+    cancellable: false
+  }, async (progress, token) => {
+    progress.report({ increment: 0 });
+
+    await completionsCreate(
+      openAiApiKey,
+      openAiMaxToken,
+      gitDiffChanges,
+      repository
+    );
+
+    progress.report({
+      increment: 100,
+      message: 'Commit message generated successfully.'
+    });
   });
 };
 
