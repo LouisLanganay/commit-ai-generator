@@ -1,71 +1,63 @@
-# commit-ai README
+# Commit AI - Visual Studio Code Extension
 
-This is the README for your extension "commit-ai". After writing up a brief description, we recommend including the following sections.
+## 📌 Overview
 
-## Features
+The Commit AI Visual Studio Code extension is a powerful tool that allows users to effortlessly generate commit messages using popular commit message norms through the OpenAI API. With this extension, you can streamline your code commit process, ensuring that your version control history is organized and informative.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 📋 Features
 
-For example if there is an image subfolder under your extension project workspace:
+- Generate commit messages using popular commit message norms.
+- Access the extension through a dedicated button in the Source Control tab.
+- Utilizes Git diff to analyze changes in your code.
+- Customize your commit message generation by adjusting various settings:
+  - Choose from different AI models.
+  - Adjust the AI temperature for message creativity.
+  - Modify the prompt for generating the commit message.
+  - Set a maximum limit for AI-generated tokens.
+- Simple and easy-to-use interface.
+- Works seamlessly with Git and the OpenAI API.
 
-\!\[feature X\]\(images/feature-x.png\)
+## ⚙ Requirements
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Before using the Commit AI extension, ensure that you have the following prerequisites installed:
 
-## Requirements
+- **Git**: You need Git installed on your system to use this extension. If Git is not installed, you can download it from [Git's official website](https://git-scm.com/downloads).
+- **OpenAI API Key**: To interact with the OpenAI API and utilize its capabilities for generating commit messages, you must have an API key. If you don't have one, sign up for an OpenAI account and obtain your API key from the [OpenAI platform](https://platform.openai.com/account/api-keys).
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 💾 Installation
 
-## Extension Settings
+1. Open Visual Studio Code (VS Code).
+2. Go to the Extensions view by clicking on the square icon in the left sidebar or pressing `Ctrl+Shift+X`.
+3. Search for "Commit AI" in the Extensions Marketplace.
+4. Click the "Install" button for the "Commit AI" extension.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## 🛠 Configuration
 
-For example:
+After installing the extension, you need to configure it with your OpenAI API key. Follow these steps:
 
-This extension contributes the following settings:
+1. Open VS Code.
+2. Click on the gear icon in the lower-left corner to open the **Settings**.
+3. Search for "Commit AI" in the settings search bar.
+4. Enter your OpenAI API key in the designated field.
+5. Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
+6. Save your settings.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## ✍ Usage
 
-## Known Issues
+1. Open a workspace that contains a Git repository.
+2. Navigate to the Source Control tab in the sidebar.
+3. You'll find a "Commit AI" button alongside the usual Git commit options.
+4. Click on the "Commit AI" button to generate a commit message based on your code changes and the configured settings.
+5. Review the generated commit message and, if satisfied, commit your changes.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## 🐞 Feedback and Issues
 
-## Release Notes
+If you encounter any issues or have suggestions for improving the Commit AI extension, please visit the [GitHub repository](https://github.com/yourusername/commit-ai-extension) and create an issue. Your feedback is valuable in enhancing the extension's functionality.
 
-Users appreciate release notes as you update your extension.
+## 📰 License
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+This extension is released under the [MIT License](LICENSE).
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!

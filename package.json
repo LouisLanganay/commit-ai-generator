@@ -1,8 +1,8 @@
 {
   "name": "commit-ai",
-  "displayName": "commit ai",
-  "description": "This is the README for your extension \"commit-ai\". After writing up a brief description, we recommend including the following sections.",
-  "version": "0.0.1",
+  "displayName": "Commit AI",
+  "description": "The Commit AI Visual Studio Code extension is a powerful tool that allows users to effortlessly generate commit messages using popular commit message norms through the OpenAI API. With this extension, you can streamline your code commit process, ensuring that your version control history is organized and informative.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -122,7 +122,7 @@
     "type": "git",
     "url": "git+https://github.com/LouisLanganay/commit-ai.git"
   },
-  "author": "",
+  "author": "Louis Langanay",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LouisLanganay/commit-ai/issues"
