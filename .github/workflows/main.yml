@@ -1,8 +1,7 @@
+name: On push
 on:
   push:
-    branches: [ main ]
 
-name: Publish to Visual Studio Marketplace
 jobs:
   check-coding-style:
     name: Check coding style using eslint
@@ -43,17 +42,3 @@ jobs:
               echo "::notice title=Coding style::No coding style error found"
               exit 0
           fi
-  deploy:
-    needs: check-coding-style
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-      - run: npm ci
-      - name: Publish to Visual Studio Marketplace
-        uses: HaaLeo/publish-vscode-extension@v1
-        with:
-          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-          registryUrl: https://marketplace.visualstudio.com
