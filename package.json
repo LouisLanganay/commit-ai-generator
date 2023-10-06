@@ -2,7 +2,7 @@
   "name": "commit-generator",
   "displayName": "Commit AI Generator",
   "description": "The Commit AI Visual Studio Code extension is a powerful tool that allows users to effortlessly generate commit messages using popular commit message norms through the OpenAI API. With this extension, you can streamline your code commit process, ensuring that your version control history is organized and informative.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "Coodo",
   "license": "MIT",
   "icon": "./src/assets/icon.png",
