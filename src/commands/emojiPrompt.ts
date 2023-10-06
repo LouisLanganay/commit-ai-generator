@@ -1,6 +1,6 @@
 const emojiPrompt: string =
 'Create a commit message. \
-Format of the commit message: <type>: <subject> <body>\
+Format of the commit message: <type>: <subject>\
 The first line cannot be longer than 72 characters and should be followed by a \
 blank line. The type and scope should always be lowercase as shown below. \
 Allowed <type> values: ["🆕 FEAT", "🐞 FIX", "📄 DOCS", "🏗️ REFACTOR", "💅 STYLE", \

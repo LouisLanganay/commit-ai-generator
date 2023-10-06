@@ -1,5 +1,7 @@
 # Commit AI - Visual Studio Code Extension
 
+![giftuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.gif)
+
 ## 📌 Overview
 
 The Commit AI Visual Studio Code extension is a powerful tool that allows users to effortlessly generate commit messages using popular commit message norms through the OpenAI API. With this extension, you can streamline your code commit process, ensuring that your version control history is organized and informative.
@@ -8,14 +10,11 @@ The Commit AI Visual Studio Code extension is a powerful tool that allows users 
 
 - Generate commit messages using popular commit message norms.
 - Access the extension through a dedicated button in the Source Control tab.
-- Utilizes Git diff to analyze changes in your code.
 - Customize your commit message generation by adjusting various settings:
   - Choose from different AI models.
   - Adjust the AI temperature for message creativity.
   - Modify the prompt for generating the commit message.
   - Set a maximum limit for AI-generated tokens.
-- Simple and easy-to-use interface.
-- Works seamlessly with Git and the OpenAI API.
 
 ## ⚙ Requirements
 
@@ -28,8 +27,8 @@ Before using the Commit AI extension, ensure that you have the following prerequ
 
 1. Open Visual Studio Code (VS Code).
 2. Go to the Extensions view by clicking on the square icon in the left sidebar or pressing `Ctrl+Shift+X`.
-3. Search for "Commit AI" in the Extensions Marketplace.
-4. Click the "Install" button for the "Commit AI" extension.
+3. Search for ``commit ai generator`` in the Extensions Marketplace.
+4. Click the "Install" button for the "Commit AI Generator" extension.
 
 ## 🛠 Configuration
 
@@ -37,18 +36,17 @@ After installing the extension, you need to configure it with your OpenAI API ke
 
 1. Open VS Code.
 2. Click on the gear icon in the lower-left corner to open the **Settings**.
-3. Search for "Commit AI" in the settings search bar.
+3. Search for "Commit AI Generator" in the settings search bar.
 4. Enter your OpenAI API key in the designated field.
-5. Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
-6. Save your settings.
+
+> Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
 
 ## ✍ Usage
 
 1. Open a workspace that contains a Git repository.
 2. Navigate to the Source Control tab in the sidebar.
-3. You'll find a "Commit AI" button alongside the usual Git commit options.
-4. Click on the "Commit AI" button to generate a commit message based on your code changes and the configured settings.
-5. Review the generated commit message and, if satisfied, commit your changes.
+3. You'll find a "Commit AI Generator" button alongside the usual Git commit options.
+4. Click on the "Commit AI Generator" button to generate a commit message based on your code changes and the configured settings.
 
 ## 🐞 Feedback and Issues
 
@@ -60,4 +58,4 @@ This extension is released under the [MIT License](LICENSE).
 
 ---
 
-Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!
+> Thank you for using the Commit AI Visual Studio Code extension! We hope this tool helps you create informative and standardized commit messages effortlessly. If you have any questions or need further assistance, feel free to reach out to us. Happy coding!
