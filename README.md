@@ -1,6 +1,9 @@
 # Commit AI - Visual Studio Code Extension
 
-![Gif Tuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.gif)
+<div style="display: flex; gap: 10px; justify-content: center">
+  <img src="https://vsmarketplacebadges.dev/installs/Coodo.commit-generator.svg" alt="Installs" />
+  <img src="https://vsmarketplacebadges.dev/rating-star/Coodo.commit-generator.svg" alt="Rating" />
+</div>
 
 ## 📌 Overview
 
@@ -40,7 +43,7 @@ After installing the extension, you need to configure it with your OpenAI API ke
 3. Search for "Commit AI Generator" in the settings search bar.
 4. Enter your OpenAI API key in the designated field.
 
-> [!NOTE] 
+> [!NOTE]
 > Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
 
 ## ✍ Usage

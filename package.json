@@ -36,7 +36,13 @@
     "color": "#4F4FFF",
     "theme": "dark"
   },
-  "badges": [],
+  "badges": [
+    {
+      "href": "https://vsmarketplacebadges.dev/rating-star/Coodo.commit-generator.svg",
+      "description": "Rating",
+      "url": "https://vsmarketplacebadges.dev/rating-star/Coodo.commit-generator.svg"
+    }
+  ],
   "activationEvents": [],
   "qna": "marketplace",
   "sponsor": {
