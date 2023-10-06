@@ -1,6 +1,6 @@
 # Commit AI - Visual Studio Code Extension
 
-![giftuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.gif)
+![Gif Tuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.gif)
 
 ## 📌 Overview
 
@@ -42,6 +42,8 @@ After installing the extension, you need to configure it with your OpenAI API ke
 > Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
 
 ## ✍ Usage
+
+![Image Tuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.png)
 
 1. Open a workspace that contains a Git repository.
 2. Navigate to the Source Control tab in the sidebar.
