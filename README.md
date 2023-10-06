@@ -39,6 +39,7 @@ After installing the extension, you need to configure it with your OpenAI API ke
 3. Search for "Commit AI Generator" in the settings search bar.
 4. Enter your OpenAI API key in the designated field.
 
+> [!NOTE] 
 > Optionally, adjust other settings such as the AI model, temperature, prompt, and maximum token limit to suit your preferences.
 
 ## ✍ Usage
