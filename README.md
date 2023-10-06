@@ -43,7 +43,7 @@ After installing the extension, you need to configure it with your OpenAI API ke
 
 ## ✍ Usage
 
-![Image Tuto](https://github.com/LouisLanganay/commit-ai-generator/blob/main/tuto.png)
+![Image Tuto](https://i.ibb.co/xhW337H/image.png)
 
 1. Open a workspace that contains a Git repository.
 2. Navigate to the Source Control tab in the sidebar.
