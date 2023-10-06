@@ -18,7 +18,8 @@ The Commit AI Visual Studio Code extension is a powerful tool that allows users 
 
 ## ⚙ Requirements
 
-Before using the Commit AI extension, ensure that you have the following prerequisites installed:
+> [!IMPORTANT]
+> Before using the Commit AI extension, ensure that you have the following prerequisites installed:
 
 - **Git**: You need Git installed on your system to use this extension. If Git is not installed, you can download it from [Git's official website](https://git-scm.com/downloads).
 - **OpenAI API Key**: To interact with the OpenAI API and utilize its capabilities for generating commit messages, you must have an API key. If you don't have one, sign up for an OpenAI account and obtain your API key from the [OpenAI platform](https://platform.openai.com/account/api-keys).
